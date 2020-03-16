@@ -51,21 +51,21 @@ def oa(s1, s2):
 
 ## Explaination:
 
-$s1$ is the first string, $s2$ is the second string.
+s1 is the first string, s2 is the second string.
 
 - #### part1:<br>
-Construct 2 lists with 26's 0 per each, which represent the number of each alphabet for two strings, $s1$ and $s2$.<br>
-Then, keep the alphabet that has shown up in $s1$, $s2$.<br>
+Construct 2 lists with 26's 0 per each, which represent the number of each alphabet for two strings, s1 and s2.<br>
+Then, keep the alphabet that has shown up in s1, s2.<br>
 
 - #### part2:<br>
-Since the length of $s1$, $s2$ might not be the same. If the length of $s1$ is larger, there must be an element which cannot be mapping to $s2$<br>
+Since the length of s1, s2 might not be the same. If the length of s1 is larger, there must be an element which cannot be mapping to s2<br>
 
 - #### part3:<br>
 Check the first element for mapping.<br>
-If the first element in $s1li$ (the maximum value in $s1li$) is larger than $s2li$ (the maximum value in $s2li$), return $False$. (many-to-many mapping)<br>
-If the first element in $s1li$ and $s2li$ are the same, mapping succeed. Then, remove the first elements of $s1li$ and $s2li$.<br>
-If the first element in $s1li$ is smaller than $s1li$, deduct the mapping succeeded value and re-sorted the $s2li$ for the next comparison.<br>
-If $s1li$ is empty, it means that every element in $s1li$ has been mapped to the value in $s2li$ with the corrected mapping method, return $True$
+If the first element in s1li (the maximum value in s1li) is larger than s2li (the maximum value in s2li), return False. (many-to-many mapping)<br>
+If the first element in s1li and s2li are the same, mapping succeed. Then, remove the first elements of s1li and s2li.<br>
+If the first element in s1li is smaller than s1li, deduct the mapping succeeded value and re-sorted the s2li for the next comparison.<br>
+If s1li is empty, it means that every element in s1li has been mapped to the value in s2li with the corrected mapping method, return True.
 
 ## Basic Testing:
 
