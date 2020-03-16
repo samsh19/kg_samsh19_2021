@@ -80,7 +80,7 @@ If s1li is empty, it means that every element in s1li has been mapped to the val
 > For any s1 (with length n) and s2 (with length m), the length of s1li and s2li are always 26, which represents a~z (assume k=26)<br>
 > <br>
 > Runtime: O(n)<br>
-> In part 3, although we need the sort in the while loop, since it only sorted with the length of 26, the runtime is k*log(k)*n, which is O(n) <br>
+> In part 3, although we need the sort in the while loop, since it only sorted with the length of 26, the runtime is k*log(k)*(n+m), which is O(n+m) <br>
 
 ## Basic Testing:
 
