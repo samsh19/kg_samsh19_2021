@@ -60,27 +60,27 @@ def oa(s1, s2):
 
 ## Explaination:
 
-s1 is the first string, s2 is the second string.
+*s1* is the first string, *s2* is the second string.
 
 - #### part1:<br>
-Since the length of s1, s2 might not be the same. If the length of s1 is larger, there must exist an element that cannot be mapped to s2.<br>
+Since the length of s1, *s2* might not be the same. If the length of *s1* is larger, there must exist an element that cannot be mapped to *s2*.<br>
 
 - #### part2:<br>
-Construct 2 lists with 26's 0 per each, which represent the number of each alphabet for s1 and s2.<br>
+Construct 2 lists with 26's 0 per each, which represent the number of each alphabet for *s1* and *s2*.<br>
 Then, sort with descending order and keep the existing alphabets.<br>
 
 - #### part3:<br>
-If the first element in s1li (the maximum value in s1li) is larger than s2li (the maximum value in s2li), return False. (many-to-many mapping)<br>
-If both the first element in s1li and s2li are the same, mapping succeed. Then, remove the first elements of s1li and s2li.<br>
-If the first element in $s1li$ is smaller than $s1li$, deduct the mapping succeeded value and re-sort the s2li for the next comparison.<br>
-If s1li is empty, it means that every element in s1li has been mapped to the value in s2li with the corrected mapping method, return True
+If the first element in *s1li* (the maximum value in *s1li*) is larger than *s2li* (the maximum value in *s2li*), return False. (many-to-many mapping)<br>
+If both the first element in *s1li* and *s2li* are the same, mapping succeed. Then, remove the first elements of *s1li* and *s2li*.<br>
+If the first element in *s1li* is smaller than *s1li*, deduct the mapping succeeded value and re-sort the *s2li* for the next comparison.<br>
+If *s1li* is empty, it means that every element in *s1li* has been mapped to the value in *s2li* with the corrected mapping method, return True
 
 - #### Consequence:<br>
 > Memory: O(1)<br>
-> For any s1 (with length n) and s2 (with length m), the length of s1li and s2li are always 26, which represents a~z (assume k=26)<br>
+> For any *s1* (with length n) and *s2* (with length m), the length of *s1li* and *s2li* are always 26, which represents a~z (assume k=26)<br>
 > <br>
-> Runtime: O(n)<br>
-> In part 3, although we need the sort in the while loop, since it only sorted with the length of 26, the runtime is k*log(k)*(n+m), which is O(n+m) <br>
+> Runtime: O(n+m)<br>
+> In part 3, although we need the sort in the while loop, since it only sorted with the length of 26, the runtime is *klog(k)(n+m)*, which is O(n+m) <br>
 
 ## Basic Testing:
 
